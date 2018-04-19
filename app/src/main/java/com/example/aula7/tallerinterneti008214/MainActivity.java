@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
     // *************************************************************************************
 
     public void processData(){
-        for (Persons str : personsList){
-            textView.append(str.getNombre() + "\n");
+        for (Persons persons : personsList){
+            textView.append(persons + "\n");
         }
     }
 
