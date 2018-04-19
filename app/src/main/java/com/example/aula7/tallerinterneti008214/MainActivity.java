@@ -38,14 +38,15 @@ public class MainActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.id_pb_data);
         textView = (TextView) findViewById(R.id.id_tv_data);
 
-        if (isOnLine()){
-            MyTask taskCountry = new MyTask();
-            taskCountry.execute("http://pastoral.iucesmag.edu.co/practica/listar.php");
-
-        }else {
-            Toast.makeText(this, "Sin conexion", Toast.LENGTH_SHORT).show();
+        if(isOnLine()) {
+            MyTask taskUsers = new MyTask();
+            taskUsers.execute("http://pastoral.iucesmag.edu.co/practica/listar.php");
+        }
+        else {
+            Toast.makeText(this, "No hay conexion a internet", Toast.LENGTH_SHORT).show();
         }
     }
+
     // Metodo para validar la conexion a internet
     public Boolean isOnLine(){
         // Hacer llamado al servicio de conectividad utilizando el ConnectivityManager
@@ -65,8 +66,13 @@ public class MainActivity extends AppCompatActivity {
     // *************************************************************************************
 
     public void processData(){
-        for (Persons persons : personsList){
-            textView.append(persons + "\n");
+        Toast.makeText(this, String.valueOf(personsList.size()), Toast.LENGTH_SHORT).show();
+
+        for(Persons persons  : personsList) {
+            textView.append("Codigo: " + persons.getCodigo() + "\n");
+            textView.append("Nombre: " + persons.getNombre() + "\n");
+            textView.append("Edad: " + persons.getEdad() + "\n");
+            textView.append("Correo: " + persons.getCorreo() + "\n\n");
         }
     }
 
@@ -104,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             processData();
-            progressBar.setVisibility(textView.GONE);
+            progressBar.setVisibility(View.GONE);
         }
     }
 }

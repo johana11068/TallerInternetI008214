@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TallerInternetI008214.iml" filepath="$PROJECT_DIR$/.idea/TallerInternetI008214.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TallerInternetI008214.iml" filepath="$PROJECT_DIR$/TallerInternetI008214.iml" />
       <module fileurl="file://C:\Users\AULA 7\Desktop\TallerInternetI008214\TallerInternetI008214.iml" filepath="C:\Users\AULA 7\Desktop\TallerInternetI008214\TallerInternetI008214.iml" />
+      <module fileurl="file://C:\Users\AULA 7\Desktop\TallerInternetI008214\.idea\TallerInternetI008214.iml" filepath="C:\Users\AULA 7\Desktop\TallerInternetI008214\.idea\TallerInternetI008214.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\AULA 7\Desktop\TallerInternetI008214\app\app.iml" filepath="C:\Users\AULA 7\Desktop\TallerInternetI008214\app\app.iml" />
     </modules>
   </component>
 </project>

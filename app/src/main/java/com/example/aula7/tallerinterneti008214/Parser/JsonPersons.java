@@ -17,10 +17,10 @@ public class JsonPersons {
     public static List<Persons> getData(String content) throws JSONException {
 
         JSONArray jsonArray = new JSONArray(content);
-        List<Persons> personsList = new ArrayList<>();
+        List<Persons> userList = new ArrayList<>();
 
-        for (int i = 0; i <= jsonArray.length(); i++){
-            JSONObject item = jsonArray.getJSONObject(i);//ingresar a cada item
+        for (int i = 0; i < jsonArray.length(); i++) {
+            JSONObject item = jsonArray.getJSONObject(i);
 
             Persons persons = new Persons();
             persons.setCodigo(item.getString("codigo"));
@@ -28,8 +28,10 @@ public class JsonPersons {
             persons.setEdad(item.getString("edad"));
             persons.setCorreo(item.getString("correo"));
 
-            personsList.add(persons);
+            userList.add(persons);
+
         }
-        return personsList;
+
+        return userList;
     }
 }
