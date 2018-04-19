@@ -17,7 +17,6 @@ public class JsonPersons {
     public static List<Persons> getData(String content) throws JSONException {
 
         JSONArray jsonArray = new JSONArray(content);
-
         List<Persons> personsList = new ArrayList<>();
 
         for (int i = 0; i <= jsonArray.length(); i++){
@@ -28,7 +27,6 @@ public class JsonPersons {
             persons.setNombre(item.getString("nombre"));
             persons.setEdad(item.getString("edad"));
             persons.setCorreo(item.getString("correo"));
-            persons.setPass(item.getString("pass"));
 
             personsList.add(persons);
         }

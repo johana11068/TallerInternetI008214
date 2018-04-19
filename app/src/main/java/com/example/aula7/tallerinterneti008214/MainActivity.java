@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.id_tv_data);
 
         if (isOnLine()){
-            TaskCountry taskCountry = new TaskCountry();
+            MyTask taskCountry = new MyTask();
             taskCountry.execute("http://pastoral.iucesmag.edu.co/practica/listar.php");
 
         }else {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
     // *************************************************************************************
 
-    public class TaskCountry extends AsyncTask<String,String,String> {
+    public class MyTask extends AsyncTask<String,String,String> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
